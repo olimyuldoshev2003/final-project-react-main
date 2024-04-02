@@ -3,20 +3,34 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import SignIn from "./pages/SignIn/SignIn";
 import Layout from "./Layout/Layout";
 import Home from "./pages/Home/Home";
+import AuthCheck from "./routes/AuthCheck/AuthCheck";
+import ProtectedRoute from "./routes/ProtectedRoute/ProtectedRoute";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "signin",
-      element: <SignIn />,
+      element: (
+        <AuthCheck>
+          <SignIn />
+        </AuthCheck>
+      ),
     },
     {
       path: "/",
-      element: <Layout />,
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           index: true,
-          element: <Home />,
+          element: (
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          ),
         },
       ],
     },
