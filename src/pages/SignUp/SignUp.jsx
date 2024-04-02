@@ -8,6 +8,9 @@ const SignUp = () => {
     <>
       <div className={`${styles.sign_up}`}>
         <form action="" className={`${styles.form}`}>
+          <div className={`${styles.for_h1}`}>
+            <h1>Sign Up</h1>
+          </div>
           <div className={`${styles.label_input}`}>
             <Input type="text" placeholderInput={`Enter your username`} />
           </div>
