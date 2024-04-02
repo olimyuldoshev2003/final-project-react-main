@@ -5,6 +5,7 @@ import Layout from "./Layout/Layout";
 import Home from "./pages/Home/Home";
 import AuthCheck from "./routes/AuthCheck/AuthCheck";
 import ProtectedRoute from "./routes/ProtectedRoute/ProtectedRoute";
+import SignUp from "./pages/SignUp/SignUp";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -13,6 +14,14 @@ const App = () => {
       element: (
         <AuthCheck>
           <SignIn />
+        </AuthCheck>
+      ),
+    },
+    {
+      path: "signup",
+      element: (
+        <AuthCheck>
+          <SignUp />
         </AuthCheck>
       ),
     },

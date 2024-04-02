@@ -27,20 +27,18 @@ const SignIn = () => {
   return (
     <>
       <div className={styles.container}>
-        <h3 className={styles.title}>Login</h3>
+        <h3 className={styles.title}>Sign in</h3>
         <form onSubmit={handleSubmit}>
           <div className={styles.field}>
             <input
-              placeholder="Login"
+              placeholder="user"
               value={login}
               onChange={(e) => setLogin(e.target.value)}
               onFocus={() => setValidation({ ...validation, login: false })}
               onBlur={() => setValidation({ ...validation, login: true })}
             />
             {login === "" && validation.login && (
-              <span className={styles.not_validate}>
-                Поля обязательное для ввода
-              </span>
+              <span className={styles.not_validate}>Required fields</span>
             )}
           </div>
           <div className={styles.field}>
@@ -53,9 +51,7 @@ const SignIn = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             {password === "" && validation.password && (
-              <span className={styles.not_validate}>
-                Поля обязательное для ввода
-              </span>
+              <span className={styles.not_validate}>Required fields</span>
             )}
           </div>
           <button
