@@ -1,7 +1,14 @@
 import { TextField } from "@mui/material";
 import React from "react";
 
-const Input = ({ typeInput, placeholderInput, value, onChangeValue }) => {
+const Input = ({
+  typeInput,
+  placeholderInput,
+  value,
+  onChangeValue,
+  onFocus,
+  onBlur,
+}) => {
   return (
     <TextField
       type={typeInput}
@@ -10,6 +17,8 @@ const Input = ({ typeInput, placeholderInput, value, onChangeValue }) => {
       variant="outlined"
       value={value}
       onChange={onChangeValue}
+      onFocus={onFocus}
+      onBlur={onBlur}
       required
     />
   );

@@ -11,19 +11,40 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: rgb(3, 61, 132);
 }
 
 .form {
+  width: 600px;
+  background-color: rgb(225, 230, 225);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 13px;
-  background-color: rgb(225, 230, 225);
   padding: 34px;
-  border-radius: 20px;
-}
-
-.label_input {
 }
 
 .label_input input {
+  width: 580px;
+}
+
+.for_link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.for_link a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(236, 65, 3);
+}
+
+.for_link a:hover {
+  text-decoration: underline;
+}
+
+.for_btn {
+  display: flex;
+  justify-content: center;
 }

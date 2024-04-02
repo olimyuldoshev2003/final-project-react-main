@@ -8,7 +8,13 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 
-const InputPassword = ({ placeholderInpPassword, value, onChangeValue }) => {
+const InputPassword = ({
+  placeholderInpPassword,
+  value,
+  onChangeValue,
+  onFocus,
+  onBlur,
+}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -25,6 +31,9 @@ const InputPassword = ({ placeholderInpPassword, value, onChangeValue }) => {
       <OutlinedInput
         id="outlined-adornment-password"
         type={showPassword ? "text" : "password"}
+        sx={{
+          width: `580px`,
+        }}
         endAdornment={
           <InputAdornment position="end">
             <IconButton
@@ -40,6 +49,9 @@ const InputPassword = ({ placeholderInpPassword, value, onChangeValue }) => {
         label={placeholderInpPassword}
         value={value}
         onChange={onChangeValue}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        fullWidth
         required
       />
     </FormControl>
