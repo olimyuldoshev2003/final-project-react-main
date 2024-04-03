@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { setLoading } from "../reducers/signUpState/signUpState";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
+//Sign Up
 export const handleSignUp = (obj, navigate) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
@@ -16,3 +18,11 @@ export const handleSignUp = (obj, navigate) => async (dispatch) => {
     }, 2000);
   }
 };
+
+//Movies from backend
+export const getMovies = createAsyncThunk("api/getMovies", async function () {
+  try {
+    const { data } = await axios.get("http://localhost:3000/movies");
+    return data;
+  } catch (error) {}
+});

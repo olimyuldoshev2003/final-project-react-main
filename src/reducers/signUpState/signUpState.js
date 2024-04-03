@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const signUpSlice = createSlice({
-  name: "signupState",
+  name: "signUpState",
   initialState,
   reducers: {
     setLoading(state, action) {

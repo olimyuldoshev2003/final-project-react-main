@@ -57,7 +57,7 @@
     {
       "name": "Madama web Trailer",
       "movie": "./public/videos/Madama-web.mp4",
-      "year": 2021,
+      "year": 2020,
       "genre": "action",
       "country": "",
       "timeLeft": 0,
@@ -76,7 +76,7 @@
       "name": "EVIL DEAD RISE - Official Trailer - (Redband)",
       "movie": "./public/videos/EVIL DEAD RISE - Official Trailer - (Redband).mp4",
       "year": 2023,
-      "genre": "",
+      "genre": "horror",
       "country": "",
       "timeLeft": 0,
       "description": ""
@@ -85,7 +85,7 @@
       "name": "DUNDEE Official Trailer 2 (2018), Margot Robbie Hugh Jackman",
       "movie": "./public/videos/DUNDEE-Official-Trailer-2-(2018)-Margot-Robbie-Hugh-Jackman-New-Comedy-Movie-HD.mp4",
       "year": 2022,
-      "genre": "",
+      "genre": "comedy",
       "country": "",
       "timeLeft": 0,
       "description": ""
@@ -94,7 +94,7 @@
       "name": "CAUSEWAY Trailer (2022), Jennifer Lawrence Drama Movie",
       "movie": "./public/videos/CAUSEWAY-Trailer-(2022)-Jennifer-Lawrence-Drama-Movie.mp4",
       "year": 2021,
-      "genre": "",
+      "genre": "drama",
       "country": "",
       "timeLeft": 0,
       "description": ""

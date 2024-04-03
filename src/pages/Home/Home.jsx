@@ -1,32 +1,35 @@
 import axios from "axios";
 import styles from "./Home.module.css";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getMovies } from "../../api/api";
 
 const Home = () => {
-  const [data, setData] = useState([]);
+  const dispatch = useDispatch();
 
-  async function getMovies() {
-    try {
-      const { data } = await axios.get("http://localhost:3000/movies");
-      console.log(data);
-      setData(data);
-    } catch (error) {}
-  }
+  const movies = useSelector((store) => store.moviesState.movies);
+  const loading = useSelector((store) => store.moviesState.loading);
 
   useEffect(() => {
-    getMovies();
+    dispatch(getMovies());
   }, []);
 
   return (
     <>
       <div className={styles.container}>
-        {data.map((item) => {
-          return (
-            <div>
-              <video src={item.movie} width={200} height={200} controls></video>
-            </div>
-          );
-        })}
+        {loading ? (
+          <div>
+            <h1>...Loading</h1>
+          </div>
+        ) : (
+          movies.map((item) => {
+            return (
+              <div>
+                <video src={item.movie} width={200} height={200}></video>
+              </div>
+            );
+          })
+        )}
       </div>
     </>
   );
