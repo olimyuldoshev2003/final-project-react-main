@@ -4,7 +4,6 @@
       "userName": "olim_yuldoshev_ooo3",
       "email": "oyuldoshev39@gmail.com",
       "password": "olim2003",
-      "confirmPassword": "olim2003",
       "id": 1
     }
   ],
@@ -12,8 +11,89 @@
   "movies": [
     {
       "name": "",
-      "movie": "",
-      "year": "",
+      "movie": "./public/videos/SPIDER-MAN_ HOMECOMING - Official Trailer (HD).mp4",
+      "year": 2023,
+      "genre": "action",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "",
+      "movie": "./public/videos/THE RIDE Trailer (2020) Ludacris, Drama Movie.mp4",
+      "year": 2022,
+      "genre": "drama",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "",
+      "movie": "./public/videos/Tarot.mp4",
+      "year": 2021,
+      "genre": "",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "",
+      "movie": "./public/videos/Unfosted.mp4",
+      "year": 2021,
+      "genre": "",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "",
+      "movie": "./public/videos/Ricky-Stanicky.mp4",
+      "year": 2020,
+      "genre": "",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "",
+      "movie": "./public/videos/Madama-web.mp4",
+      "year": 2021,
+      "genre": "",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "",
+      "movie": "./public/videos/Furiosa.mp4",
+      "year": 2022,
+      "genre": "",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "",
+      "movie": "./public/videos/EVIL DEAD RISE - Official Trailer - (Redband).mp4",
+      "year": 2023,
+      "genre": "",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "",
+      "movie": "./public/videos/DUNDEE-Official-Trailer-2-(2018)-Margot-Robbie-Hugh-Jackman-New-Comedy-Movie-HD.mp4",
+      "year": 2022,
+      "genre": "",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "name": "CAUSEWAY Trailer (2022), Jennifer Lawrence Drama Movie",
+      "movie": "./public/videos/CAUSEWAY-Trailer-(2022)-Jennifer-Lawrence-Drama-Movie.mp4",
+      "year": 2021,
       "genre": "",
       "country": "",
       "timeLeft": 0,

@@ -93,18 +93,6 @@ const SignUp = () => {
               <span className={styles.not_validate}>Required fields</span>
             )}
           </div>
-          <div className={`${styles.label_input}`}>
-            <InputPassword
-              placeholderInpPassword={`Confirm your password`}
-              value={confirmPassword}
-              onChangeValue={(event) => setConfirmPassword(event.target.value)}
-              // onFocus={setValidation({ ...validation, confirmPassword: false })}
-              // onBlur={setValidation({ ...validation, confirmPassword: true })}
-            />
-            {confirmPassword === "" && validation.confirmPassword && (
-              <span className={styles.not_validate}>Required fields</span>
-            )}
-          </div>
 
           <div className={`${styles.for_link}`}>
             <Link to={``}>Forget password</Link>
