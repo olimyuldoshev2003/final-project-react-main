@@ -10,7 +10,7 @@
 
   "movies": [
     {
-      "name": "",
+      "name": "SPIDER-MAN_ HOMECOMING - Official Trailer (HD)",
       "movie": "./public/videos/SPIDER-MAN_ HOMECOMING - Official Trailer (HD).mp4",
       "year": 2023,
       "genre": "action",
@@ -19,7 +19,7 @@
       "description": ""
     },
     {
-      "name": "",
+      "name": "THE RIDE Trailer (2020) Ludacris, Drama Movie",
       "movie": "./public/videos/THE RIDE Trailer (2020) Ludacris, Drama Movie.mp4",
       "year": 2022,
       "genre": "drama",
@@ -28,52 +28,52 @@
       "description": ""
     },
     {
-      "name": "",
+      "name": "Tarot Trailer",
       "movie": "./public/videos/Tarot.mp4",
       "year": 2021,
-      "genre": "",
+      "genre": "horror",
       "country": "",
       "timeLeft": 0,
       "description": ""
     },
     {
-      "name": "",
+      "name": "Unfosted Trailer",
       "movie": "./public/videos/Unfosted.mp4",
       "year": 2021,
-      "genre": "",
+      "genre": "comedy",
       "country": "",
       "timeLeft": 0,
       "description": ""
     },
     {
-      "name": "",
+      "name": "Ricky Stanicky Trailer",
       "movie": "./public/videos/Ricky-Stanicky.mp4",
       "year": 2020,
-      "genre": "",
+      "genre": "comedy",
       "country": "",
       "timeLeft": 0,
       "description": ""
     },
     {
-      "name": "",
+      "name": "Madama web Trailer",
       "movie": "./public/videos/Madama-web.mp4",
       "year": 2021,
-      "genre": "",
+      "genre": "action",
       "country": "",
       "timeLeft": 0,
       "description": ""
     },
     {
-      "name": "",
+      "name": "Furiosa Trailer",
       "movie": "./public/videos/Furiosa.mp4",
       "year": 2022,
-      "genre": "",
+      "genre": "action",
       "country": "",
       "timeLeft": 0,
       "description": ""
     },
     {
-      "name": "",
+      "name": "EVIL DEAD RISE - Official Trailer - (Redband)",
       "movie": "./public/videos/EVIL DEAD RISE - Official Trailer - (Redband).mp4",
       "year": 2023,
       "genre": "",
@@ -82,7 +82,7 @@
       "description": ""
     },
     {
-      "name": "",
+      "name": "DUNDEE Official Trailer 2 (2018), Margot Robbie Hugh Jackman",
       "movie": "./public/videos/DUNDEE-Official-Trailer-2-(2018)-Margot-Robbie-Hugh-Jackman-New-Comedy-Movie-HD.mp4",
       "year": 2022,
       "genre": "",
