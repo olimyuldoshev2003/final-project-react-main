@@ -24,7 +24,7 @@ const Home = () => {
         ) : (
           movies.map((item) => {
             return (
-              <div>
+              <div key={item.id}>
                 <video src={item.movie} width={200} height={200}></video>
               </div>
             );

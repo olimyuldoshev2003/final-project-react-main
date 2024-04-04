@@ -10,6 +10,7 @@
 
   "movies": [
     {
+      "id": "1",
       "name": "SPIDER-MAN_ HOMECOMING - Official Trailer (HD)",
       "movie": "./public/videos/SPIDER-MAN_ HOMECOMING - Official Trailer (HD).mp4",
       "year": 2023,
@@ -19,6 +20,7 @@
       "description": ""
     },
     {
+      "id": "2",
       "name": "THE RIDE Trailer (2020) Ludacris, Drama Movie",
       "movie": "./public/videos/THE RIDE Trailer (2020) Ludacris, Drama Movie.mp4",
       "year": 2022,
@@ -28,6 +30,7 @@
       "description": ""
     },
     {
+      "id": "3",
       "name": "Tarot Trailer",
       "movie": "./public/videos/Tarot.mp4",
       "year": 2021,
@@ -37,6 +40,7 @@
       "description": ""
     },
     {
+      "id": "4",
       "name": "Unfosted Trailer",
       "movie": "./public/videos/Unfosted.mp4",
       "year": 2021,
@@ -46,6 +50,7 @@
       "description": ""
     },
     {
+      "id": "5",
       "name": "Ricky Stanicky Trailer",
       "movie": "./public/videos/Ricky-Stanicky.mp4",
       "year": 2020,
@@ -55,6 +60,7 @@
       "description": ""
     },
     {
+      "id": "6",
       "name": "Madama web Trailer",
       "movie": "./public/videos/Madama-web.mp4",
       "year": 2020,
@@ -64,6 +70,7 @@
       "description": ""
     },
     {
+      "id": "7",
       "name": "Furiosa Trailer",
       "movie": "./public/videos/Furiosa.mp4",
       "year": 2022,
@@ -73,6 +80,7 @@
       "description": ""
     },
     {
+      "id": "8",
       "name": "EVIL DEAD RISE - Official Trailer - (Redband)",
       "movie": "./public/videos/EVIL DEAD RISE - Official Trailer - (Redband).mp4",
       "year": 2023,
@@ -82,6 +90,7 @@
       "description": ""
     },
     {
+      "id": "9",
       "name": "DUNDEE Official Trailer 2 (2018), Margot Robbie Hugh Jackman",
       "movie": "./public/videos/DUNDEE-Official-Trailer-2-(2018)-Margot-Robbie-Hugh-Jackman-New-Comedy-Movie-HD.mp4",
       "year": 2022,
@@ -91,6 +100,7 @@
       "description": ""
     },
     {
+      "id": "10",
       "name": "CAUSEWAY Trailer (2022), Jennifer Lawrence Drama Movie",
       "movie": "./public/videos/CAUSEWAY-Trailer-(2022)-Jennifer-Lawrence-Drama-Movie.mp4",
       "year": 2021,

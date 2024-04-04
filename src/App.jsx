@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import AuthCheck from "./routes/AuthCheck/AuthCheck";
 import ProtectedRoute from "./routes/ProtectedRoute/ProtectedRoute";
 import SignUp from "./pages/SignUp/SignUp";
+import Movie from "./pages/Movie/Movie";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -39,6 +40,14 @@ const App = () => {
           element: (
             <ProtectedRoute>
               <Home />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "/:id",
+          element: (
+            <ProtectedRoute>
+              <Movie />
             </ProtectedRoute>
           ),
         },
