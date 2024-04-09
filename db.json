@@ -12,7 +12,7 @@
     {
       "id": "1",
       "name": "SPIDER-MAN_ HOMECOMING - Official Trailer (HD)",
-      "movie": "./public/videos/SPIDER-MAN_ HOMECOMING - Official Trailer (HD).mp4",
+      "movie": "../../public/videos/SPIDER-MAN_ HOMECOMING - Official Trailer (HD).mp4",
       "year": 2023,
       "genre": "action",
       "country": "",
@@ -22,7 +22,7 @@
     {
       "id": "2",
       "name": "THE RIDE Trailer (2020) Ludacris, Drama Movie",
-      "movie": "./public/videos/THE RIDE Trailer (2020) Ludacris, Drama Movie.mp4",
+      "movie": "../../public/videos/THE RIDE Trailer (2020) Ludacris, Drama Movie.mp4",
       "year": 2022,
       "genre": "drama",
       "country": "",
@@ -32,7 +32,7 @@
     {
       "id": "3",
       "name": "Tarot Trailer",
-      "movie": "./public/videos/Tarot.mp4",
+      "movie": "../../public/videos/Tarot.mp4",
       "year": 2021,
       "genre": "horror",
       "country": "",
@@ -42,7 +42,7 @@
     {
       "id": "4",
       "name": "Unfosted Trailer",
-      "movie": "./public/videos/Unfosted.mp4",
+      "movie": "../../public/videos/Unfosted.mp4",
       "year": 2021,
       "genre": "comedy",
       "country": "",
@@ -52,7 +52,7 @@
     {
       "id": "5",
       "name": "Ricky Stanicky Trailer",
-      "movie": "./public/videos/Ricky-Stanicky.mp4",
+      "movie": "../../public/videos/Ricky-Stanicky.mp4",
       "year": 2020,
       "genre": "comedy",
       "country": "",
@@ -62,7 +62,7 @@
     {
       "id": "6",
       "name": "Madama web Trailer",
-      "movie": "./public/videos/Madama-web.mp4",
+      "movie": "../../public/videos/Madama-web.mp4",
       "year": 2020,
       "genre": "action",
       "country": "",
@@ -72,7 +72,7 @@
     {
       "id": "7",
       "name": "Furiosa Trailer",
-      "movie": "./public/videos/Furiosa.mp4",
+      "movie": "../../public/videos/Furiosa.mp4",
       "year": 2022,
       "genre": "action",
       "country": "",
@@ -82,7 +82,7 @@
     {
       "id": "8",
       "name": "EVIL DEAD RISE - Official Trailer - (Redband)",
-      "movie": "./public/videos/EVIL DEAD RISE - Official Trailer - (Redband).mp4",
+      "movie": "../../public/videos/EVIL DEAD RISE - Official Trailer - (Redband).mp4",
       "year": 2023,
       "genre": "horror",
       "country": "",
@@ -92,7 +92,7 @@
     {
       "id": "9",
       "name": "DUNDEE Official Trailer 2 (2018), Margot Robbie Hugh Jackman",
-      "movie": "./public/videos/DUNDEE-Official-Trailer-2-(2018)-Margot-Robbie-Hugh-Jackman-New-Comedy-Movie-HD.mp4",
+      "movie": "../../public/videos/DUNDEE-Official-Trailer-2-(2018)-Margot-Robbie-Hugh-Jackman-New-Comedy-Movie-HD.mp4",
       "year": 2022,
       "genre": "comedy",
       "country": "",
@@ -102,8 +102,28 @@
     {
       "id": "10",
       "name": "CAUSEWAY Trailer (2022), Jennifer Lawrence Drama Movie",
-      "movie": "./public/videos/CAUSEWAY-Trailer-(2022)-Jennifer-Lawrence-Drama-Movie.mp4",
+      "movie": "../../public/videos/CAUSEWAY-Trailer-(2022)-Jennifer-Lawrence-Drama-Movie.mp4",
       "year": 2021,
+      "genre": "drama",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "id": "11",
+      "name": "Borderlands Trailer",
+      "movie": "../../public/videos/Borderlands.mp4",
+      "year": 2020,
+      "genre": "action",
+      "country": "",
+      "timeLeft": 0,
+      "description": ""
+    },
+    {
+      "id": "12",
+      "name": "99 Homes Official Trailer #1 (2015) - Andrew Garfield",
+      "movie": "../public/videos/Ninety-Homes-Official-Trailer-2015-Andrew-Garfiel-Laura-Dern-Drama-HD.mp4",
+      "year": 2023,
       "genre": "drama",
       "country": "",
       "timeLeft": 0,

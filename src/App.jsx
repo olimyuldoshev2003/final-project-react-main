@@ -7,7 +7,9 @@ import Home from "./pages/Home/Home";
 import AuthCheck from "./routes/AuthCheck/AuthCheck";
 import ProtectedRoute from "./routes/ProtectedRoute/ProtectedRoute";
 import SignUp from "./pages/SignUp/SignUp";
-import Movie from "./pages/Movie/Movie";
+import Movie from "./pages/FilteredMovies/FilteredMovies";
+import Movies from "./pages/Movies/Movies";
+import FilteredMovies from "./pages/FilteredMovies/FilteredMovies";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -44,10 +46,14 @@ const App = () => {
           ),
         },
         {
-          path: "/:id",
+          path: `movies`,
+          element: <Movies />,
+        },
+        {
+          path: "movies/:id",
           element: (
             <ProtectedRoute>
-              <Movie />
+              <FilteredMovies />
             </ProtectedRoute>
           ),
         },

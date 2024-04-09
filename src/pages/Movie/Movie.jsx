@@ -1,22 +1,11 @@
-import axios from "axios";
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
 
 const Movie = () => {
-  const { id } = useParams();
-
-  async function getMoviesById() {
-    try {
-      const { data } = await axios.get(`http://localhost:3000/movies?q=${id}`);
-      console.log(data);
-    } catch (error) {}
-  }
-
-  useEffect(() => {
-    getMoviesById();
-  }, []);
-
-  return <></>;
+  return (
+    <>
+      <div className="page_each_movie"></div>
+    </>
+  );
 };
 
 export default Movie;

@@ -3,15 +3,17 @@
 }
 
 .header {
+  background-color: #252425;
+  border-bottom: 6px solid red;
 }
 
 .header_block {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #252425;
   padding: 5px 30px;
-  border-bottom: 6px solid red;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .for_logo img {
@@ -62,7 +64,7 @@
   cursor: pointer;
 }
 
-.genres,
+.shows,
 .movies {
   width: 98.94%;
   height: 300px;
@@ -72,38 +74,37 @@
   left: 0;
   animation: changePosition 0.2s ease;
   padding: 5px 10px;
+  z-index: 5;
 }
 
-.genres h2,
-.movies h2 {
+.filter_block {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1440px;
+  margin: 30px auto;
+  margin-bottom: 0;
+}
+
+.block_filter_genres h1,
+.block_filter_by_year h1 {
   color: #fff;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
-.for_block_genres {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 15px;
-  gap: 20px;
+.filter_genres,
+.filter_by_year {
+  margin-top: 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.genre a {
+.filter_genres a,
+.filter_by_year a {
   text-decoration: none;
-  font-size: 18px;
-  color: #fff;
-}
-
-.for_block_movies {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 15px;
-  gap: 20px;
-}
-
-.movie a {
-  text-decoration: none;
-  font-size: 18px;
   color: #fff;
 }
 
