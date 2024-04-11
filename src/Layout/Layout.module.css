@@ -36,8 +36,22 @@
   color: #fff;
   font-size: 19px;
   cursor: pointer;
-  padding-top: 30px;
-  padding-bottom: 30px;
+}
+
+.lists li button:hover {
+  text-decoration: underline;
+}
+
+.lists li a {
+  background-color: transparent;
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lists li a:hover {
+  text-decoration: underline;
 }
 
 .block_3_header {
@@ -62,27 +76,44 @@
   outline: none;
   background-color: #fff;
   cursor: pointer;
+  
 }
 
 .shows,
 .movies {
-  width: 98.94%;
-  height: 300px;
+  width: 98%;
+  height: 200px;
   background-color: #252425;
   position: absolute;
-  top: 96px;
+  top: 68px;
   left: 0;
   animation: changePosition 0.2s ease;
   padding: 5px 10px;
   z-index: 5;
+  transform: translate(-50% -50%);
+}
+
+@keyframes changePosition {
+  from {
+    position: absolute;
+    top: 40px;
+    left: 0;
+  }
+  to {
+    position: absolute;
+    top: 68px;
+    left: 0;
+  }
 }
 
 .filter_block {
+  height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
   max-width: 1440px;
-  margin: 30px auto;
+  margin: 0 auto;
   margin-bottom: 0;
 }
 
@@ -108,15 +139,99 @@
   color: #fff;
 }
 
-@keyframes changePosition {
-  from {
-    position: absolute;
-    top: 60px;
-    left: 0;
-  }
-  to {
-    position: absolute;
-    top: 96px;
-    left: 0;
+/* For desktop size */
+
+@media (max-width: 1023px) {
+  .shows,
+  .movies {
+    max-width: 97.4%;
   }
 }
+
+/* For tablet size */
+@media (max-width: 767px) {
+  .shows,
+  .movies {
+    max-width: 96.4%;
+  }
+}
+
+/* For mobile size */
+@media (max-width: 560px) {
+  .shows,
+  .movies {
+    max-width: 96%;
+  }
+}
+
+@media (max-width: 500px) {
+  .shows,
+  .movies {
+    max-width: 95.5%;
+  }
+}
+
+@media (max-width: 440px) {
+  .shows,
+  .movies {
+    max-width: 95%;
+  }
+}
+@media (max-width: 400px) {
+  .shows,
+  .movies {
+    max-width: 94.5%;
+  }
+}
+@media (max-width: 400px) {
+  .shows,
+  .movies {
+    max-width: 94%;
+  }
+}
+
+.block_modal_search {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.modal_search {
+  width: 300px;
+  min-height: 200px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  right: 30px;
+  top: 62px;
+  border-radius: 5px;
+  z-index: 2;
+  box-shadow: 0 0 10px #e4e3e3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* transition: all 0.2s ease; */
+}
+
+.searching_movies_block h1{
+  
+
+  font-size: 20px;
+}
+
+.loading_block_searched_movies h1{
+  font-size: 20px;
+  
+}
+
+.not_found_block_searched_movies h1{
+  
+  font-size: 20px;
+}
+
+.each_searched_movies h4{
+  font-size: 20px;
+}
+

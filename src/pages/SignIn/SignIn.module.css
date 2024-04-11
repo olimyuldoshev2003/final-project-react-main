@@ -1,49 +1,94 @@
-
-.title {
-    text-align: center;
-}
-.container {
-    max-width: 600px;
-    background-color: #f5f5f5;
-    border-radius: 16px;
-    margin: 100px auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+.for_h1 h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
 
-.field {
-    width: 100%;
-    margin: 16px 0px;
+.sign_in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(0, 4, 19);
 }
 
-.field input {
-    border-radius: 8px;
-    border: none;
-    border: 1px solid rgba(0,0,0, 0.5);
-    outline: none;
-    background: none;
-    padding: 10px;
-    width: calc(100% - 30px);
+.form {
+  width: 400px;
+  background-color: rgba(14, 17, 27, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 34px;
+  box-shadow: 0 0 10px rgb(14, 17, 27);
 }
 
-.not_validate {
-    color: red;
-    font-size: 0.6rem;
-
+.label_input input {
+  width: 100%;
+  padding: 12px 7px;
+  background-color: transparent;
+  border: 1px solid rgb(172, 169, 169);
+  color: #fff;
+  border-radius: 5px;
 }
 
-.btn_confirm {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: none;
-    background-color: rgb(108, 108, 160);
-    color: #fff;
-    cursor: pointer;
+.label_input input::placeholder {
+  color: #9b9999;
 }
 
-.btn_confirm:disabled {
-    background-color: rgba(108, 108, 160, 0.5);
+.label_input input:valid {
+  border: 1px solid green;
+}
+
+.label_input input:invalid {
+  border: 1px solid red;
+}
+
+.label_input span {
+  display: block;
+  margin-top: 7px;
+  color: red;
+  font-size: 0.7rem;
+}
+
+.for_link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.for_link a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(224, 224, 224);
+}
+
+.for_link a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.for_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.for_btn button:enabled {
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+}
+
+.for_btn button:disabled {
+  background-color: rgba(0, 128, 0, 0.63);
+  color: #9b9999;
+  padding: 5px 20px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
 }

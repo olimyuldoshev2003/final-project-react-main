@@ -1,19 +1,19 @@
 import axios from "axios";
-import styles from "./FilteredMovies.module.css";
+import styles from "./FilteredMoviesByYear.module.css";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const FilteredMovies = () => {
+const FilteredMoviesByYear = () => {
   const { id } = useParams();
 
-  const [moviesByGenre, setMoviesByGenre] = useState([]);
+  const [moviesByYear, setMoviesByYear] = useState([]);
 
   async function getMoviesById() {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/movies?q=${id}`
+        `http://localhost:3000/movies?q=${id.toString()}`
       );
-      setMoviesByGenre(data);
+      setMoviesByYear(data);
       console.log(data);
     } catch (error) {}
   }
@@ -26,10 +26,10 @@ const FilteredMovies = () => {
     <>
       <div className={`${styles.page_filtered_movie}`}>
         <h1>
-          List of {id} trailers, found {moviesByGenre.length} trailers
+          List of {id} year, found {moviesByYear.length} trailers
         </h1>
         <div className={`${styles.got_filtered_movies_by_genre}`}>
-          {moviesByGenre.map((item) => {
+          {moviesByYear.map((item) => {
             return (
               <div key={item.id} className={`${styles.each_movie_by_genre}`}>
                 <video src={item.movie}></video>
@@ -43,4 +43,4 @@ const FilteredMovies = () => {
   );
 };
 
-export default FilteredMovies;
+export default FilteredMoviesByYear;

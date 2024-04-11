@@ -7,9 +7,10 @@ import Home from "./pages/Home/Home";
 import AuthCheck from "./routes/AuthCheck/AuthCheck";
 import ProtectedRoute from "./routes/ProtectedRoute/ProtectedRoute";
 import SignUp from "./pages/SignUp/SignUp";
-import Movie from "./pages/FilteredMovies/FilteredMovies";
 import Movies from "./pages/Movies/Movies";
 import FilteredMovies from "./pages/FilteredMovies/FilteredMovies";
+import FilteredMoviesByYear from "./pages/FilteredMoviesByYear/FilteredMoviesByYear";
+import Movie from "./pages/Movie/Movie";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -54,6 +55,22 @@ const App = () => {
           element: (
             <ProtectedRoute>
               <FilteredMovies />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "moviesByYear/:id",
+          element: (
+            <ProtectedRoute>
+              <FilteredMoviesByYear />
+            </ProtectedRoute>
+          ),
+        },
+        {
+          path: "eachMovies/:id",
+          element: (
+            <ProtectedRoute>
+              <Movie />
             </ProtectedRoute>
           ),
         },

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Layout.module.css";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
@@ -7,13 +7,32 @@ import { TfiSearch } from "react-icons/tfi";
 
 //for images
 import logoHeader from "../assets/logoHeader.jpg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchMovies } from "../reducers/moviesState/moviesState";
+import { getSearchedMovies } from "../api/api";
 
 const Layout = () => {
-  const location = useLocation();
+  const dispatch = useDispatch();
+
+  // const location = useLocation();
+  const closeModalSearch = useRef();
 
   const [modalShows, setModalShows] = useState(false);
   const [modalMovies, setModalMovies] = useState(false);
+  const [modalSearch, setModalSearch] = useState(false);
+  // const [searchMovies, setSearchMovies] = useState("")
+
+  const searchMovies = useSelector((store) => store.moviesState.searchMovies);
+  const searchedMovies = useSelector(
+    (store) => store.moviesState.searchedMovies
+  );
+  const loadingSearchedMovies = useSelector(
+    (store) => store.moviesState.loadingSearchedMovies
+  );
+
+  useEffect(() => {
+    dispatch(getSearchedMovies(searchMovies));
+  }, [dispatch, searchMovies]);
 
   return (
     <>
@@ -67,16 +86,16 @@ const Layout = () => {
                           <h1>By Year</h1>
                           <ul className={`${styles.filter_by_year}`}>
                             <li>
-                              <Link to={`movies/2020`}>2020</Link>
+                              <Link to={`moviesByYear/2020`}>2020</Link>
                             </li>
                             <li>
-                              <Link to={`movies/2021`}>2021</Link>
+                              <Link to={`moviesByYear/2021`}>2021</Link>
                             </li>
                             <li>
-                              <Link to={`movies/2022`}>2022</Link>
+                              <Link to={`moviesByYear/2022`}>2022</Link>
                             </li>
                             <li>
-                              <Link to={`movies/2023`}>2023</Link>
+                              <Link to={`moviesByYear/2023`}>2023</Link>
                             </li>
                             {/* <li>
                               <Link to={``}>2024</Link>
@@ -88,22 +107,7 @@ const Layout = () => {
                   ) : null}
                 </li>
                 <li>
-                  <button
-                    className={styles.btn_movies}
-                    onMouseOver={() => {
-                      setModalMovies(true);
-                      setModalShows(false);
-                    }}
-                  ></button>
-                  {modalMovies ? (
-                    <div
-                      className={styles.movies}
-                      onMouseLeave={() => {
-                        setModalMovies(false);
-                        setModalShows(false);
-                      }}
-                    ></div>
-                  ) : null}
+                  <Link to={`/movies`}>Movies</Link>
                 </li>
                 {/* <li>
                     <button></button>
@@ -117,6 +121,13 @@ const Layout = () => {
                   name=""
                   id=""
                   placeholder="Search everything"
+                  value={searchMovies}
+                  onChange={(event) => {
+                    dispatch(setSearchMovies(event.target.value));
+                  }}
+                  onFocus={() => {
+                    setModalSearch(true);
+                  }}
                 />
                 <button>
                   <TfiSearch className={`${styles.search_icon}`} />
@@ -127,6 +138,49 @@ const Layout = () => {
               </div>
             </div>
           </div>
+          {modalSearch ? (
+            <div
+              className={`${styles.block_modal_search}`}
+              ref={closeModalSearch}
+              onClick={(event) => {
+                if (event.target === closeModalSearch.current) {
+                  setModalSearch(false);
+                }
+              }}
+            >
+              <div className={styles.modal_search}>
+                {loadingSearchedMovies === false && searchMovies === "" ? (
+                  <div className={`${styles.searching_movies_block}`}>
+                    <h1>You need to search first</h1>
+                  </div>
+                ) : loadingSearchedMovies ? (
+                  <div className={`${styles.loading_block_searched_movies}`}>
+                    <h1>Loading...</h1>
+                  </div>
+                ) : (
+                  searchedMovies.map((item) => {
+                    return (
+                      <div
+                        key={item.id}
+                        className={`${styles.each_searched_movies}`}
+                      >
+                        <h4>{item.name}</h4>
+                      </div>
+                    );
+                  })
+                )}
+
+                {searchedMovies.length === 0 &&
+                  loadingSearchedMovies === false && (
+                    <div
+                      className={`${styles.not_found_block_searched_movies}`}
+                    >
+                      <h1>Movies not found</h1>
+                    </div>
+                  )}
+              </div>
+            </div>
+          ) : null}
         </header>
         <Outlet />
         <footer className={styles.footer}></footer>

@@ -22,7 +22,27 @@ export const handleSignUp = (obj, navigate) => async (dispatch) => {
 //Movies from backend
 export const getMovies = createAsyncThunk("api/getMovies", async function () {
   try {
-    const { data } = await axios.get("http://localhost:3000/movies");
+    const { data } = await axios.get(  `http://localhost:3000/movies` );
     return data;
   } catch (error) {}
+});
+
+export const getSearchedMovies = createAsyncThunk("api/searchMovies", async function (movies) {
+  try {
+    const { data } = await axios.get(
+      movies === ``
+        ? `http://localhost:3000/movies`
+        : `http://localhost:3000/movies?q=${movies}`
+    );
+    return data;
+  } catch (error) {}
+});
+
+export const registeredUsers = createAsyncThunk("api/registeredUser", async function () {
+  try {
+    const { data } = await axios.get(`http://localhost:3000/signup`);
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
 });

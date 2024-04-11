@@ -1,3 +1,3 @@
 
 
-export const getToken = () => Boolean(localStorage.getItem('token'));
+export const getToken = () => Boolean(localStorage.getItem('access_token'));

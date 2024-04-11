@@ -2,49 +2,103 @@
   text-align: center;
   font-size: 25px;
   font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 .sign_up {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: rgb(3, 61, 132);
+  min-height: 100vh;
+  background-color: rgb(0, 4, 19);
 }
 
 .form {
-  width: 600px;
-  background-color: rgb(225, 230, 225);
+  width: 400px;
+  background-color: rgba(14, 17, 27, 0.5);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 13px;
   padding: 34px;
+  box-shadow: 0 0 10px rgb(14, 17, 27);
 }
 
 .label_input input {
-  width: 580px;
+  width: 100%;
+  padding: 12px 7px;
+  background-color: transparent;
+  border: 1px solid rgb(172, 169, 169);
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* .label_input input:focus {
+  
+  border: 1px solid #fff;
+} */
+
+.label_input input::placeholder {
+  color: #9b9999;
+}
+
+.label_input input:valid {
+  border: 1px solid green;
+}
+.label_input input:invalid {
+  border: 1px solid red;
+}
+
+.label_input span {
+  display: block;
+  margin-top: 7px;
+  color: red;
+  font-size: 0.7rem;
 }
 
 .for_link {
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
 }
 
 .for_link a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
-  color: rgb(236, 65, 3);
+  color: rgb(240, 238, 238);
+}
+
+.for_link span {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(224, 224, 224);
 }
 
 .for_link a:hover {
   text-decoration: underline;
+  color: #fff;
 }
 
 .for_btn {
   display: flex;
   justify-content: center;
+}
+
+.for_btn button:enabled {
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+}
+
+.for_btn button:disabled {
+  background-color: rgba(0, 128, 0, 0.63);
+  color: #9b9999;
+  padding: 5px 20px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
 }
