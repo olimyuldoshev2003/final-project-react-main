@@ -11,39 +11,51 @@ import Movies from "./pages/Movies/Movies";
 import FilteredMovies from "./pages/FilteredMovies/FilteredMovies";
 import FilteredMoviesByYear from "./pages/FilteredMoviesByYear/FilteredMoviesByYear";
 import Movie from "./pages/Movie/Movie";
+import Profile from "./pages/Profile/Profile";
+import FavoriteMovies from "./pages/FavoriteMovies/FavoriteMovies";
+import SavedMovies from "./pages/SavedMovies/SavedMovies";
+import Introduction from "./pages/Introduction/Introduction";
 
 const App = () => {
   const router = createBrowserRouter([
     {
+      path: "introduction",
+      element: (
+          <Introduction />
+        // <AuthCheck>
+        // </AuthCheck>
+      ),
+    },
+    {
       path: "signin",
       element: (
-        <AuthCheck>
           <SignIn />
-        </AuthCheck>
+        // <AuthCheck>
+        // </AuthCheck>
       ),
     },
     {
       path: "signup",
       element: (
-        <AuthCheck>
-          <SignUp />
-        </AuthCheck>
+        <SignUp />
+        // <AuthCheck>
+        // </AuthCheck>
       ),
     },
     {
       path: "/",
       element: (
-        <ProtectedRoute>
           <Layout />
-        </ProtectedRoute>
+        // <ProtectedRoute>
+        // </ProtectedRoute>
       ),
       children: [
         {
           index: true,
           element: (
-            <ProtectedRoute>
               <Home />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            // </ProtectedRoute>
           ),
         },
         {
@@ -51,27 +63,47 @@ const App = () => {
           element: <Movies />,
         },
         {
+          path: `profile`,
+          element: <Profile />,
+        },
+        {
           path: "movies/:id",
           element: (
-            <ProtectedRoute>
               <FilteredMovies />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            // </ProtectedRoute>
           ),
         },
         {
           path: "moviesByYear/:id",
           element: (
-            <ProtectedRoute>
               <FilteredMoviesByYear />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            // </ProtectedRoute>
           ),
         },
         {
           path: "eachMovies/:id",
           element: (
-            <ProtectedRoute>
               <Movie />
-            </ProtectedRoute>
+            // <ProtectedRoute>
+            // </ProtectedRoute>
+          ),
+        },
+        {
+          path: `favoriteMovies`,
+          element: (
+              <FavoriteMovies />
+            // <ProtectedRoute>
+            // </ProtectedRoute>
+          ),
+        },
+        {
+          path: `savedMovies`,
+          element: (
+              <SavedMovies />
+            // <ProtectedRoute>
+            // </ProtectedRoute>
           ),
         },
       ],

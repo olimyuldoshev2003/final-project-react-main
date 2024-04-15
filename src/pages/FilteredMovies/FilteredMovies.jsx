@@ -1,7 +1,7 @@
 import axios from "axios";
 import styles from "./FilteredMovies.module.css";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const FilteredMovies = () => {
   const { id } = useParams();
@@ -31,10 +31,12 @@ const FilteredMovies = () => {
         <div className={`${styles.got_filtered_movies_by_genre}`}>
           {moviesByGenre.map((item) => {
             return (
-              <div key={item.id} className={`${styles.each_movie_by_genre}`}>
-                <video src={item.movie}></video>
-                <h2>{item.name}</h2>
-              </div>
+              <Link to={`eachMovies/${item.id}`} key={item.id}>
+                <div className={`${styles.each_movie_by_genre}`}>
+                  <video src={item.movie}></video>
+                  <h2>{item.name}</h2>
+                </div>
+              </Link>
             );
           })}
         </div>

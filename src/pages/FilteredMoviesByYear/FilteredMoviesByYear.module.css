@@ -21,6 +21,7 @@
   padding: 14px;
   border: 1px solid rgb(187, 187, 187);
   border-radius: 6px;
+  text-decoration: none;
 }
 
 .each_movie_by_genre video {

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getToken } from "../../../utils/token";
 import { registeredUsers } from "../../../api/api";
+import axios from "axios";
 
 const initialState = {
   isAuth: getToken(),
@@ -27,28 +28,25 @@ export const authSlice = createSlice({
 });
 export const { setLoading, setIsAuth } = authSlice.actions;
 
-export const handleLogin =
-  (userName, password, navigate, users) => async (dispatch) => {
-    dispatch(setLoading(true));
-    let registeredUser = users.find((item) => {
-      return item.userName === userName && item.password === password
-    })
 
-    // if (userName === "kamolovd" && password === "12345678") {
-    //   localStorage.setItem("token", "kamolovd&12345678");
-    //   dispatch(setIsAuth(true));
-    //   navigate("/");
-    // } else {
-      //   alert("Error");
-      // }
+export const handleLogin =
+(userName, password, navigate, users) => async (dispatch) => {
+  let registeredUser = users.find((item) => {
+    return item.userName === userName && item.password === password
+  })
+    dispatch(setLoading(true));
       
     if (registeredUser !== undefined) {
       localStorage.setItem("access_token", `${registeredUser.userName}&${registeredUser.password}`);
-      // localStorage.setItem("user", registeredUser);
+      const { data } = await axios.post(
+        "http://localhost:3000/user",
+        registeredUser
+      );
       dispatch(setIsAuth(true));
-        navigate("/");
+      navigate("/");
+      alert("You successfully signed in to your account")
     } else {
-      alert("Error");
+      alert("Your username or password is incorrect");
     }
 
     let timeout = setTimeout(() => {

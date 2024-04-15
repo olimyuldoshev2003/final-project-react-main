@@ -41,9 +41,9 @@
   border: 1px solid green;
 }
 
-.label_input input:invalid {
-  border: 1px solid red;
-}
+/* .label_input input:invalid { */
+  /* border: 1px solid red; */
+/* } */
 
 .label_input span {
   display: block;

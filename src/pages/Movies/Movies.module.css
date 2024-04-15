@@ -1,14 +1,19 @@
 .section_1 {
   margin-top: 36px;
+  display: flex;
+  padding: 20px;
 }
 
 .section_1 h1 {
   text-align: center;
 }
 
+.btn_filter_mobile_size {
+  display: none;
+}
+
 .all_movies {
   max-width: 1440px;
-
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -17,12 +22,8 @@
   margin-top: 20px;
 }
 
-a {
+.all_movies a {
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 .each_movies_movies {
@@ -53,8 +54,202 @@ a:hover {
   color: #000;
 }
 
+.for_btns {
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+}
+
+.for_favorite_video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.for_favorite_video button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.for_favorite_video svg {
+  font-size: 30px;
+}
+
+.for_favorite_video h2 {
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 100px;
+}
+
+.for_save {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.for_save button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.for_save h2 {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.for_save svg {
+  font-size: 30px;
+}
+
+.for_save h2 {
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 100px;
+}
+
+.for_pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.filter_block_s_1 {
+  width: 30%;
+}
+
+.for_h1 h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* for H1 Mobile size */
+.for_h1_mobile_size {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 90%;
+  top: 11%;
+  background-color: #fff;
+  border-bottom: 1px solid gray;
+}
+
+.for_h1_mobile_size h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.for_h1_mobile_size button {
+  border: none;
+  background: none;
+  font-size: 42px;
+}
+
+.by_genre {
+  margin-top: 20px;
+}
+
+.by_genre h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.each_genres {
+  margin-top: 5px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.each_genres li a {
+  color: blue;
+}
+
+.each_genres li a:hover {
+  text-decoration: underline;
+}
+
+.by_year {
+  margin-top: 20px;
+}
+
+.by_year h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.each_movies_by_year {
+  margin-top: 5px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.each_movies_by_year li a {
+  color: blue;
+}
+
+.each_movies_by_year li a:hover {
+  text-decoration: underline;
+}
+
+.block_filter_mobile_size {
+  display: none;
+}
+
+.filters_block_mobile_size {
+  margin-top: 50px;
+}
+
+.filter_mobile_size {
+  padding: 20px;
+}
+
+.drawer_mobile_size {
+  /* height: 360px; */
+  border-radius: 100px;
+}
+
 @media (max-width: 999px) {
   .all_movies {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn_filter_mobile_size {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .btn_filter_mobile_size button {
+    padding: 12px 40px;
+    outline: none;
+    border: none;
+    background-color: rgb(223, 223, 223);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .filter_block_s_1 {
+    display: none;
+  }
+
+  .block_filter_mobile_size {
+    display: block;
   }
 }

@@ -20,19 +20,31 @@ export const handleSignUp = (obj, navigate) => async (dispatch) => {
 };
 
 //Movies from backend
-export const getMovies = createAsyncThunk("api/getMovies", async function () {
+export const getMovies = createAsyncThunk("api/getMovies", async function (obj) {
   try {
-    const { data } = await axios.get(  `http://localhost:3000/movies` );
+    const { data } = await axios.get(  `http://localhost:3000/movies?_page=${obj.page}&_limit=6` );
     return data;
   } catch (error) {}
 });
 
+export const getMoviesOfMovie = createAsyncThunk(
+  "api/getMoviesOfMovie",
+  async function () {
+    try {
+      const { data } = await axios.get(`http://localhost:3000/movies`);
+      return data;
+    } catch (error) {}
+  }
+);
+
 export const getSearchedMovies = createAsyncThunk("api/searchMovies", async function (movies) {
   try {
     const { data } = await axios.get(
-      movies === ``
-        ? `http://localhost:3000/movies`
-        : `http://localhost:3000/movies?q=${movies}`
+      // movies === ``
+      //   ?
+        `http://localhost:3000/movies`
+        
+        // : `http://localhost:3000/movies?q=${movies}`
     );
     return data;
   } catch (error) {}
@@ -46,3 +58,34 @@ export const registeredUsers = createAsyncThunk("api/registeredUser", async func
     console.error(error);
   }
 });
+
+export const getFavoriteMovies = createAsyncThunk("api/getFavoriteMovies",
+  async function () {
+    try {
+      const { data } = await axios.get(`http://localhost:3000/favoriteMovies`);
+      return data;
+    } catch (error) {
+      
+    }
+  }
+);
+
+export const getSavedMovies = createAsyncThunk("api/getSavedMovies",
+  async function () {
+    try {
+      const { data } = await axios.get(`http://localhost:3000/savedMovies`);
+      return data;
+    } catch (error) {
+      
+    }
+  }
+);
+
+
+
+
+
+
+
+
+

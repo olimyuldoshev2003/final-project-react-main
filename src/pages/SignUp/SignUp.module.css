@@ -17,8 +17,8 @@
   width: 400px;
   background-color: rgba(14, 17, 27, 0.5);
   border-radius: 20px;
-  display: flex;
   flex-direction: column;
+  display: flex;
   gap: 13px;
   padding: 34px;
   box-shadow: 0 0 10px rgb(14, 17, 27);
@@ -45,9 +45,9 @@
 .label_input input:valid {
   border: 1px solid green;
 }
-.label_input input:invalid {
-  border: 1px solid red;
-}
+/* .label_input input:invalid { */
+  /* border: 1px solid red; */
+/* } */
 
 .label_input span {
   display: block;

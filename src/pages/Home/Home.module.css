@@ -21,10 +21,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 .each_movies_home {
   max-width: 280px;
   display: flex;
@@ -51,6 +47,69 @@ a:hover {
 .each_movies_home h5 {
   margin-top: 10px;
   color: #000;
+}
+
+.for_btns {
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+}
+
+.for_favorite_video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.for_favorite_video button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.for_favorite_video svg {
+  font-size: 30px;
+}
+
+.for_favorite_video h2 {
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 100px;
+}
+
+.for_save {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.for_save button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.for_save h2 {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.for_save svg {
+  font-size: 30px;
+}
+
+.for_save h2 {
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 100px;
 }
 
 @media (max-width: 999px) {

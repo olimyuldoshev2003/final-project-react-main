@@ -7,6 +7,14 @@
       "password": "12345678"
     }
   ],
+  "user": [
+    {
+      "id": "8a31",
+      "userName": "olim_yuldoshev_ooo3",
+      "email": "oyuldoshev39@gmail.com",
+      "password": "12345678"
+    }
+  ],
   "movies": [
     {
       "id": "1",
@@ -14,10 +22,34 @@
       "movie": "../../public/videos/SPIDER-MAN_ HOMECOMING - Official Trailer (HD).mp4",
       "year": 2023,
       "genre": "action",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 100000
+      "country": "USA",
+      "timeOfMovie": 133,
+      "watched": false,
+      "description": "Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.",
+      "viewers": 100000,
+      "director": {
+        "name": "Jon Watts",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Tom Holland",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Zendaya",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Jake Gyllenhaal",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 7.5,
+      "image": "https://via.placeholder.com/300",
+      "favorite": true,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "2",
@@ -25,10 +57,34 @@
       "movie": "../../public/videos/THE RIDE Trailer (2020) Ludacris, Drama Movie.mp4",
       "year": 2022,
       "genre": "drama",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 41212
+      "country": "USA",
+      "timeOfMovie": 120,
+      "watched": false,
+      "description": "The story of John Buultjens, who has dedicated his life to the sport of BMX.",
+      "viewers": 41212,
+      "director": {
+        "name": "Alex Ranarivelo",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Shane Graham",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Ludacris",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Sasha Alexander",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 6.8,
+      "image": "https://via.placeholder.com/300",
+      "favorite": true,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "3",
@@ -36,10 +92,34 @@
       "movie": "../../public/videos/Tarot.mp4",
       "year": 2021,
       "genre": "horror",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 20000
+      "country": "USA",
+      "timeOfMovie": 90,
+      "watched": false,
+      "description": "A sinister presence manipulates a teenager into committing acts of violence. She must unravel its connection to her mind and survive the evil force that has invaded her life.",
+      "viewers": 20000,
+      "director": {
+        "name": "Carter Smith",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Dylan Minnette",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Piercey Dalton",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Patricia Bethune",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 5.6,
+      "image": "https://via.placeholder.com/300",
+      "favorite": true,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "4",
@@ -47,98 +127,379 @@
       "movie": "../../public/videos/Unfosted.mp4",
       "year": 2021,
       "genre": "comedy",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 39001
+      "country": "USA",
+      "timeOfMovie": 105,
+      "watched": false,
+      "description": "A group of friends uncover an otherworldly object in a rural field, which they soon discover holds greater secrets than they could imagine.",
+      "viewers": 39001,
+      "director": {
+        "name": "Jeff Baena",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Alison Brie",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Aubrey Plaza",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Dave Franco",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 6.2,
+      "image": "https://via.placeholder.com/300",
+      "favorite": true,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "5",
-      "name": "Ricky Stanicky Trailer",
-      "movie": "../../public/videos/Ricky-Stanicky.mp4",
-      "year": 2020,
-      "genre": "comedy",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 10000
-    },
-    {
-      "id": "6",
       "name": "Madama web Trailer",
       "movie": "../../public/videos/Madama-web.mp4",
       "year": 2020,
       "genre": "action",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 6000
+      "country": "USA",
+      "timeOfMovie": 110,
+      "watched": false,
+      "description": "A sequel to the 2018 film 'Venom'.",
+      "viewers": 6000,
+      "director": {
+        "name": "Andy Serkis",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Tom Hardy",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Woody Harrelson",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 7,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
+    },
+    {
+      "id": "6",
+      "name": "The Weekend Away Trailer",
+      "movie": "../../public/videos/THE WEEKEND AWAY Trailer (2022) Leighton Meester, Thriller Movie.mp4",
+      "year": 2022,
+      "genre": "thriller",
+      "country": "USA",
+      "timeOfMovie": 100,
+      "watched": false,
+      "description": "A woman goes on a weekend getaway with her best friend to take a break from her life in London.",
+      "viewers": 102312,
+      "director": {
+        "name": "Kim Farrant",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Leighton Meester",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Christina Wolfe",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Zainab Jah",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 5.7,
+      "image": "https://via.placeholder.com/300",
+      "favorite": true,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "7",
-      "name": "Furiosa Trailer",
-      "movie": "../../public/videos/Furiosa.mp4",
-      "year": 2022,
-      "genre": "action",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 4000
+      "name": "Just Married Trailer",
+      "movie": "../../public/videos/Just Married Trailer.mp4",
+      "year": 2003,
+      "genre": "comedy",
+      "country": "USA",
+      "timeOfMovie": 95,
+      "watched": false,
+      "description": "A young newlywed couple honeymoon in Europe, where obstacles challenge their ability to sustain the marriage.",
+      "viewers": 15434,
+      "director": {
+        "name": "Shawn Levy",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Ashton Kutcher",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Brittany Murphy",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 5.5,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "8",
-      "name": "EVIL DEAD RISE - Official Trailer - (Redband)",
-      "movie": "../../public/videos/EVIL DEAD RISE - Official Trailer - (Redband).mp4",
-      "year": 2023,
-      "genre": "horror",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 3002
+      "name": "The Witches Trailer",
+      "movie": "../../public/videos/The Witches Trailer.mp4",
+      "year": 2020,
+      "genre": "adventure",
+      "country": "USA",
+      "timeOfMovie": 106,
+      "watched": false,
+      "description": "Based on Roald Dahl's 1983 classic book 'The Witches', the story tells the scary, funny, and imaginative tale of a seven-year-old boy who has a run-in with some real-life witches!",
+      "viewers": 71000,
+      "director": {
+        "name": "Robert Zemeckis",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Anne Hathaway",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Octavia Spencer",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Stanley Tucci",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 5.3,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "9",
-      "name": "DUNDEE Official Trailer 2 (2018), Margot Robbie Hugh Jackman",
-      "movie": "../../public/videos/DUNDEE-Official-Trailer-2-(2018)-Margot-Robbie-Hugh-Jackman-New-Comedy-Movie-HD.mp4",
+      "name": "Kimi Trailer",
+      "movie": "../../public/videos/KIMI Trailer.mp4",
       "year": 2022,
-      "genre": "comedy",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 3812
+      "genre": "thriller",
+      "country": "USA",
+      "timeOfMovie": 125,
+      "watched": false,
+      "description": "An agoraphobic woman living alone in New York begins spying on her new neighbors, only to witness a disturbing act of violence.",
+      "viewers": 98000,
+      "director": {
+        "name": "Steven Soderbergh",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Zoe Kravitz",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Byron Bowers",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Jaime Camil",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 6,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "10",
-      "name": "CAUSEWAY Trailer (2022), Jennifer Lawrence Drama Movie",
-      "movie": "../../public/videos/CAUSEWAY-Trailer-(2022)-Jennifer-Lawrence-Drama-Movie.mp4",
+      "name": "Antlers Trailer",
+      "movie": "../../public/videos/Antlers trailer.mp4",
       "year": 2021,
-      "genre": "drama",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 2345
+      "genre": "horror",
+      "country": "USA",
+      "timeOfMovie": 99,
+      "watched": false,
+      "description": "A young teacher discovers that her troubled student's father and younger brother harbor a deadly supernatural secret. Taking the boy into her care, the teacher must fight for their survival against horrors beyond imagination.",
+      "viewers": 81000,
+      "director": {
+        "name": "Scott Cooper",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Keri Russell",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Jesse Plemons",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Jeremy T. Thomas",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 6.2,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "11",
-      "name": "Borderlands Trailer",
-      "movie": "../../public/videos/Borderlands.mp4",
-      "year": 2020,
-      "genre": "action",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 4332
+      "name": "Hotel Transylvania 4",
+      "movie": "../../public/videos/HOTEL TRANSYLVANIA 4 Trailer.mp4",
+      "year": 2021,
+      "genre": "animation",
+      "country": "USA",
+      "timeOfMovie": 89,
+      "watched": false,
+      "description": "The film is an upcoming sequel to Hotel Transylvania 3: Summer Vacation (2018).",
+      "viewers": 27000,
+      "director": {
+        "name": "Derek Drymon",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Selena Gomez",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Andy Samberg",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Kathryn Hahn",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 6.2,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
     },
     {
       "id": "12",
-      "name": "99 Homes Official Trailer #1 (2015) - Andrew Garfield",
-      "movie": "../public/videos/Ninety-Homes-Official-Trailer-2015-Andrew-Garfiel-Laura-Dern-Drama-HD.mp4",
-      "year": 2023,
-      "genre": "drama",
-      "country": "",
-      "timeLeft": 0,
-      "description": "",
-      "viewers": 1239
+      "name": "Cruella",
+      "movie": "../../public/videos/Cruella Trailer.mp4",
+      "year": 2021,
+      "genre": "comedy",
+      "country": "USA",
+      "timeOfMovie": 134,
+      "watched": false,
+      "description": "Estella is a young and clever grifter who's determined to make a name for herself in the fashion world. She soon meets a pair of thieves who appreciate her appetite for mischief, and together they build a life for themselves on the streets of London. However, when Estella befriends fashion legend Baroness von Hellman, she embraces her wicked side to become the raucous and revenge-bent Cruella.",
+      "viewers": 89000,
+      "director": {
+        "name": "Craig Gillespie",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Emma Stone",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Emma Thompson",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Joel Fry",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 7.4,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
     }
-  ]
+  ],
+  "favoriteMovies": [
+    {
+      "id": "12",
+      "name": "Cruella",
+      "movie": "../../public/videos/Cruella Trailer.mp4",
+      "year": 2021,
+      "genre": "comedy",
+      "country": "USA",
+      "timeOfMovie": 134,
+      "watched": false,
+      "description": "Estella is a young and clever grifter who's determined to make a name for herself in the fashion world. She soon meets a pair of thieves who appreciate her appetite for mischief, and together they build a life for themselves on the streets of London. However, when Estella befriends fashion legend Baroness von Hellman, she embraces her wicked side to become the raucous and revenge-bent Cruella.",
+      "viewers": 89000,
+      "director": {
+        "name": "Craig Gillespie",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Emma Stone",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Emma Thompson",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Joel Fry",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 7.4,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
+    },
+    {
+      "id": "9",
+      "name": "Kimi Trailer",
+      "movie": "../../public/videos/KIMI Trailer.mp4",
+      "year": 2022,
+      "genre": "thriller",
+      "country": "USA",
+      "timeOfMovie": 125,
+      "watched": false,
+      "description": "An agoraphobic woman living alone in New York begins spying on her new neighbors, only to witness a disturbing act of violence.",
+      "viewers": 98000,
+      "director": {
+        "name": "Steven Soderbergh",
+        "image": "https://via.placeholder.com/150"
+      },
+      "actors": [
+        {
+          "name": "Zoe Kravitz",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Byron Bowers",
+          "image": "https://via.placeholder.com/150"
+        },
+        {
+          "name": "Jaime Camil",
+          "image": "https://via.placeholder.com/150"
+        }
+      ],
+      "imdbRating": 6,
+      "image": "https://via.placeholder.com/300",
+      "favorite": false,
+      "save": false,
+      "channel": "Movie Channel"
+    }
+  ],
+  "savedMovies": []
 }

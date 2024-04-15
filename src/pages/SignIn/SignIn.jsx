@@ -25,6 +25,9 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    
+
     dispatch(handleLogin(login, password, navigate, users));
     dispatch(registeredUsers())
   };
@@ -65,7 +68,7 @@ const SignIn = () => {
             )}
           </div>
           <div className={`${styles.for_link}`}>
-            <Link to={``}>Forgot password?</Link>
+            {/* <Link to={``}>Forgot password?</Link> */}
             <Link to={`/signup`}>Sign Up</Link>
           </div>
           <div className={`${styles.for_btn}`}>
