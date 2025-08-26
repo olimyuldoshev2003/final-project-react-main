@@ -28,6 +28,7 @@ const Layout = () => {
   const [modalShows, setModalShows] = useState(false);
   const [modalMovies, setModalMovies] = useState(false);
   const [modalSearch, setModalSearch] = useState(false);
+  const [filterMovies, setFilterMovies] = useState(false);
 
   const searchMovies = useSelector((store) => store.moviesState.searchMovies);
   const searchedMovies = useSelector(
@@ -77,9 +78,110 @@ const Layout = () => {
         <nav className={`${styles.navigation_mobile_size}`}>
           <ul className={`${styles.lists_mobile_size}`}>
             <li>
-              <button className={styles.btn_shows}>
-                Shows <FaAngleDown />
+              <button
+                className={styles.btn_shows}
+                onClick={() => {
+                  setFilterMovies(!filterMovies);
+                }}
+              >
+                Shows{" "}
+                <FaAngleDown
+                  style={{
+                    transform: filterMovies ? `rotate(180deg)` : `rotate(0deg)`,
+                    transition: `0.4s`,
+                  }}
+                />
               </button>
+              <div
+                className={`${styles.filter_block_mobile_size}`}
+                style={filterMovies ? {} : { display: `none` }}
+              >
+                <div className={`${styles.block_filter_genres_mobile_size}`}>
+                  <h1>Genre</h1>
+                  <ul className={`${styles.filter_genres_mobile_size}`}>
+                    <li>
+                      <Link
+                        to={`movies/action`}
+                        onClick={toggleDrawer(anchor, false)}
+                        onKeyDown={toggleDrawer(anchor, false)}
+                      >
+                        Action
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`movies/drama`}
+                        onClick={toggleDrawer(anchor, false)}
+                        onKeyDown={toggleDrawer(anchor, false)}
+                      >
+                        Drama
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`movies/horror`}
+                        onClick={toggleDrawer(anchor, false)}
+                        onKeyDown={toggleDrawer(anchor, false)}
+                      >
+                        Horror
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`movies/comedy`}
+                        onClick={toggleDrawer(anchor, false)}
+                        onKeyDown={toggleDrawer(anchor, false)}
+                      >
+                        Comedy
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className={`${styles.block_filter_by_year_mobile_size}`}>
+                  <h1>By Year</h1>
+                  <ul className={`${styles.filter_by_year_mobile_size}`}>
+                    <li>
+                      <Link
+                        to={`moviesByYear/2020`}
+                        onClick={toggleDrawer(anchor, false)}
+                        onKeyDown={toggleDrawer(anchor, false)}
+                      >
+                        2020
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`moviesByYear/2021`}
+                        onClick={toggleDrawer(anchor, false)}
+                        onKeyDown={toggleDrawer(anchor, false)}
+                      >
+                        2021
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`moviesByYear/2022`}
+                        onClick={toggleDrawer(anchor, false)}
+                        onKeyDown={toggleDrawer(anchor, false)}
+                      >
+                        2022
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`moviesByYear/2023`}
+                        onClick={toggleDrawer(anchor, false)}
+                        onKeyDown={toggleDrawer(anchor, false)}
+                      >
+                        2023
+                      </Link>
+                    </li>
+                    {/* <li>
+                              <Link to={`#`}>2024</Link>
+                            </li> */}
+                  </ul>
+                </div>
+              </div>
             </li>
             <li>
               <Link

@@ -142,8 +142,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 90%;
+  /* position: fixed;
+  width: 90%; */
   top: 11%;
   background-color: #fff;
   border-bottom: 1px solid gray;

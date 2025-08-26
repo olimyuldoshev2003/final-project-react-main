@@ -146,6 +146,43 @@
   color: #fff;
 }
 
+/* Filter block mobile size */
+.filter_block_mobile_size {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.block_filter_genres_mobile_size h1,
+.block_filter_by_year_mobile_size h1 {
+  color: #fff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.filter_genres_mobile_size,
+.filter_by_year_mobile_size {
+  margin-top: 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter_genres_mobile_size a,
+.filter_by_year_mobile_size a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/*  */
+
 .block_modal_search {
   width: 100%;
   height: 100vh;
