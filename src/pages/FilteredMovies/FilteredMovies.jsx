@@ -31,7 +31,7 @@ const FilteredMovies = () => {
         <div className={`${styles.got_filtered_movies_by_genre}`}>
           {moviesByGenre.map((item) => {
             return (
-              <Link to={`eachMovies/${item.id}`} key={item.id}>
+              <Link to={`/eachMovies/${item.id}`} key={item.id}>
                 <div className={`${styles.each_movie_by_genre}`}>
                   <video src={item.movie}></video>
                   <h2>{item.name}</h2>

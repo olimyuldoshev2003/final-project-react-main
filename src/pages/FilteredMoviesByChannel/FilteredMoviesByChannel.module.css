@@ -34,7 +34,8 @@
 }
 
 .each_movie_by_channel h2 {
+  max-width: 300px;
   margin-top: 5px;
   font-size: 20px;
-  max-width: 300px;
+  color: #000;
 }

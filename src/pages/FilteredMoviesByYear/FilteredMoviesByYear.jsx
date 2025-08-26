@@ -25,15 +25,15 @@ const FilteredMoviesByYear = () => {
 
   return (
     <>
-      <div className={`${styles.page_filtered_movie}`}>
+      <div className={`${styles.page_filtered_movie_by_year}`}>
         <h1>
           List of {id} year, found {moviesByYear.length} trailers
         </h1>
-        <div className={`${styles.got_filtered_movies_by_genre}`}>
+        <div className={`${styles.got_filtered_movies_by_year}`}>
           {moviesByYear.map((item) => {
             return (
               <Link to={`/eachMovies/${item.id}`} key={item.id}>
-                <div className={`${styles.each_movie_by_genre}`} key={item.id}>
+                <div className={`${styles.each_movie_by_year}`} key={item.id}>
                   <video src={item.movie}></video>
                   <h2>{item.name}</h2>
                 </div>
