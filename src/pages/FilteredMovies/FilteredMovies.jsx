@@ -11,7 +11,7 @@ const FilteredMovies = () => {
   async function getMoviesById() {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/movies?q=${id}`
+        `http://localhost:3000/movies?genre=${id}`
       );
       setMoviesByGenre(data);
       console.log(data);

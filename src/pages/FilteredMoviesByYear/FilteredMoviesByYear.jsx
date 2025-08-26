@@ -12,7 +12,7 @@ const FilteredMoviesByYear = () => {
   async function getMoviesById() {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/movies?q=${id.toString()}`
+        `http://localhost:3000/movies?year=${id.toString()}`
       );
       setMoviesByYear(data);
       console.log(data);

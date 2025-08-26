@@ -158,6 +158,10 @@
   margin-top: 10px;
 }
 
+.btn_shows {
+  cursor: pointer;
+}
+
 .block_filter_genres_mobile_size h1,
 .block_filter_by_year_mobile_size h1 {
   color: #fff;
@@ -178,6 +182,11 @@
 .filter_by_year_mobile_size a {
   text-decoration: none;
   color: #fff;
+}
+
+.filter_genres_mobile_size a:hover,
+.filter_by_year_mobile_size a:hover {
+  text-decoration: underline;
 }
 
 
@@ -313,6 +322,10 @@
   width: 100%;
   font-size: 20px;
   color: #fff;
+}
+
+.lists_mobile_size li a:hover {
+  text-decoration: underline;
 }
 
 /* For desktop size */

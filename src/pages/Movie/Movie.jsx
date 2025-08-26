@@ -1,12 +1,17 @@
 import styles from "./Movie.module.css";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { getFavoriteMovies, getMovies, getMoviesOfMovie, getSavedMovies } from "../../api/api";
+import {
+  getFavoriteMovies,
+  getMovies,
+  getMoviesOfMovie,
+  getSavedMovies,
+} from "../../api/api";
 import { setMoviesOfEachMovie } from "../../reducers/moviesState/moviesState";
 
-//Material Icon
+// Material Icon
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { IconButton } from "@mui/material";
@@ -15,7 +20,6 @@ import { LibraryAdd } from "@mui/icons-material";
 
 const Movie = () => {
   const dispatch = useDispatch();
-
   const { id } = useParams();
 
   const favoriteMovies = useSelector(
@@ -25,15 +29,43 @@ const Movie = () => {
   const movies = useSelector((store) => store.moviesState.moviesOfEachMovie);
 
   const [movie, setMovie] = useState([]);
+  const [shuffledMovies, setShuffledMovies] = useState([]);
 
   const isAlreadyFavorite = favoriteMovies.some((obj) => obj.id === movie.id);
   const isAlreadySaved = savedMovies.some((obj) => obj.id === movie.id);
+
+  // Function to shuffle array and return 5 random movies excluding the current one
+  const getRandomMovies = useMemo(() => {
+    return (moviesArray, currentId) => {
+      if (!moviesArray || moviesArray.length === 0) return [];
+
+      // Filter out the current movie
+      const filteredMovies = moviesArray.filter(
+        (movie) => movie.id !== currentId
+      );
+
+      // If we have 5 or fewer movies, return them all
+      if (filteredMovies.length <= 5) return filteredMovies;
+
+      // Shuffle the array using Fisher-Yates algorithm
+      const shuffled = [...filteredMovies];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+
+      // Return first 5 elements
+      return shuffled.slice(0, 5);
+    };
+  }, []);
 
   async function getMovieById() {
     try {
       const { data } = await axios.get(`http://localhost:3000/movies/${id}`);
       setMovie(data);
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error fetching movie:", error);
+    }
   }
 
   async function addToFavorite(obj) {
@@ -48,7 +80,6 @@ const Movie = () => {
         );
         dispatch(getFavoriteMovies());
       } else {
-        // If the movie is already in the list, you can handle it accordingly
         alert("Movie is already in the favorite list");
       }
     } catch (error) {
@@ -70,16 +101,26 @@ const Movie = () => {
       } else {
         alert("Movie is already in the saved list");
       }
-    } catch (error) {}
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   useEffect(() => {
     dispatch(getMovies());
-    getMovieById()
-    dispatch(getFavoriteMovies())
-    dispatch(getSavedMovies())
-    dispatch(getMoviesOfMovie())
+    getMovieById();
+    dispatch(getFavoriteMovies());
+    dispatch(getSavedMovies());
+    dispatch(getMoviesOfMovie());
   }, [id]);
+
+  // Update shuffled movies when movies data or id changes
+  useEffect(() => {
+    if (movies && movies.length > 0) {
+      const randomMovies = getRandomMovies(movies, id);
+      setShuffledMovies(randomMovies);
+    }
+  }, [movies, id, getRandomMovies]);
 
   return (
     <>
@@ -107,7 +148,6 @@ const Movie = () => {
                     }}
                   >
                     <FavoriteBorderIcon />
-                    {/* <h2>Add</h2> */}
                   </IconButton>
                 ) : (
                   <IconButton>
@@ -123,7 +163,6 @@ const Movie = () => {
                   }}
                 >
                   <LibraryAdd />
-                  {/* <h2>Add</h2> */}
                 </IconButton>
                 {!isAlreadySaved ? <h2>Save</h2> : <h2>Saved</h2>}
               </div>
@@ -134,26 +173,21 @@ const Movie = () => {
               <h1>Top Trailers</h1>
             </div>
             <div className={`${styles.block_movies}`}>
-              {movies
-                .filter((item) => {
-                  return item.id !== id;
-                })
-                .slice(0, 5)
-                .map((item) => {
-                  return (
-                    <Link to={`/eachMovies/${item.id}`} key={item.id}>
-                      <div className={`${styles.each_movies}`}>
-                        <video src={`${item.movie}`}></video>
-                        <div className={`${styles.for_texts}`}>
-                          <h1>{item.name}</h1>
-                          <h4>
-                            Genre: <span>{item.genre}</span>
-                          </h4>
-                        </div>
+              {shuffledMovies.map((item) => {
+                return (
+                  <Link to={`/eachMovies/${item.id}`} key={item.id}>
+                    <div className={`${styles.each_movies}`}>
+                      <video src={`${item.movie}`}></video>
+                      <div className={`${styles.for_texts}`}>
+                        <h1>{item.name}</h1>
+                        <h4>
+                          Genre: <span>{item.genre}</span>
+                        </h4>
                       </div>
-                    </Link>
-                  );
-                })}
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

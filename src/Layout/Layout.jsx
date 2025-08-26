@@ -341,7 +341,9 @@ const Layout = () => {
               <div className={`${styles.for_mobile_size}`}>
                 {["left"].map((anchor) => (
                   <React.Fragment key={anchor}>
-                    <MenuIcon onClick={toggleDrawer(anchor, true)} />
+                    <MenuIcon onClick={toggleDrawer(anchor, true)} sx={{
+                      cursor: `pointer`
+                    }} />
                     <Drawer
                       anchor={anchor}
                       open={state[anchor]}
